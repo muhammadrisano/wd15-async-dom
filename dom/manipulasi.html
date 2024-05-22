@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-center{
+            text-align: center;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">helo world</h1>
+
+    <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cum repellendus nulla veniam impedit ea aliquid maxime officia excepturi enim.</p>
+
+    <a class="link">pindah kegoogle</a>
+
+    <div id="root"></div>
+    
+    <script>
+        // manipulasi element
+        // const elH1 = document.getElementById('title')
+        // elH1.innerHTML = "belajar javascript <a href='https://google.com'> DOM </a>"
+
+        const elP = document.querySelector('.content')
+        elP.style.color = "red"
+        elP.style.textAlign = "center"
+
+
+        const elA = document.querySelector('.link')
+        elA.setAttribute('href', 'https://google.com')
+        elA.setAttribute('target', '_blank')
+
+        elA.removeAttribute('class')
+
+        elA.classList.add('text-center')
+
+
+        // manipulasi node
+
+        const elRoot = document.getElementById('root')
+
+        const elPnew = document.createElement('p')
+        const textP = document.createTextNode('helo worlds')
+        elPnew.appendChild(textP)
+
+        elRoot.appendChild(elPnew)
+    </script>
+</body>
+</html>

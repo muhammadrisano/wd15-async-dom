@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .text-red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">belajar menggunakan atribute event</h1>
+    <button onclick="handleClick()">click me</button>
+
+    <button id="show">show</button>
+
+    <button id="checkout">checkout</button>
+
+
+    <div id="root"></div>
+    <script>
+
+        const handleClick = ()=>{
+            const elH1 = document.getElementById('title')
+            elH1.classList.toggle('text-red')
+        }
+
+        // element method
+        const elButtonShow = document.getElementById('show')
+        elButtonShow.onclick = ()=>{
+            const elRoot = document.getElementById('root')
+            if(!elRoot.innerHTML){
+                elRoot.innerHTML =  '<h1>My Name Risano</h1>'
+            }else{
+                elRoot.innerHTML = ''
+            }
+        }
+
+        // addEventListener
+
+        const elButtonCheckout = document.getElementById('checkout')
+        elButtonCheckout.addEventListener('mouseover', ()=>{
+            const elRoot = document.getElementById('root')
+            elRoot.innerHTML = '<h1>helo saya menggunakan addEvenetListener</h1>'
+        })
+    </script>
+</body>
+</html>
